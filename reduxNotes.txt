@@ -1,0 +1,11 @@
+Install redux in project:
+
+previously we used to have redux and react redux.
+Redux toolkit is a wrapper around that.
+So we install the Redux toolkit:
+https://redux-toolkit.js.org/
+
+Getting Started -> Installation -> 
+Run the following:
+npm install @reduxjs/toolkit
+npm install react-redux
