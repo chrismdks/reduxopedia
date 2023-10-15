@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { resetDestination } from "./destinationSlice";
 
 const initialState = {count:0};
 
@@ -23,7 +24,7 @@ export const counterSlice = createSlice({
     },
     extraReducers: (builder) => {
         // listen to a custom route
-        builder.addCase('destination/resetDestination', (state) => {
+        builder.addCase(resetDestination.toString(), (state) => {
             state.count=0;
         })
     }
