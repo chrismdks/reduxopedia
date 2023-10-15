@@ -8,11 +8,3 @@ export const store = configureStore({
         counterStore: counterReducer
     }
 })
-// check state
-console.log(store.getState());
-// call increment action:
-store.dispatch({
-    type: "counter/increment"
-});
-// check again
-console.log(store.getState());
