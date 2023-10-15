@@ -8,6 +8,7 @@ import DestinationList from './app/components/DestinationList';
   That way if we have multiple components, they will all have access to global store */
 import { store } from './redux/store';
 import { Provider } from 'react-redux';
+import DestinationFact from './app/components/DestinationFact';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +17,7 @@ root.render(
       <Header/>
       <Counter/>
       <DestinationList/>
+      <DestinationFact/>
     </Provider>
   </div>
 );

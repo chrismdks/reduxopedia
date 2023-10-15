@@ -18,7 +18,8 @@ const initialState = () => {
           days: 14,
           fact: "Last country in the world to be inhabited by humans"
       }
-    ]
+    ],
+    destinationSelected: null
   }
 };
 
@@ -28,9 +29,11 @@ export const destinationSlice = createSlice({
   reducers:{
     // all actions we want in our app, related to that particular slice (e.g. increment, decrement)
     // state: state of THIS slice, not of the store.
-    
+    destinationClicked: (state, action) => {
+      state.destinationSelected = action.payload
+    }
   }
 })
 
-//export const {increment,decrement,incrementMultiplier,decrementMultiplier} = counterSlice.actions; // export specific actions of reducer
+export const {destinationClicked} = destinationSlice.actions; // export specific actions of reducer
 export const destinationReducer =  destinationSlice.reducer; // export whole reducer
