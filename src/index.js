@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Header from './app/layout/Header';
 import Counter from './app/components/Counter';
+import DestinationList from './app/components/DestinationList';
 
 /* We will have to wrap the complete app with our store (Provider component with store property)
   That way if we have multiple components, they will all have access to global store */
@@ -14,6 +15,7 @@ root.render(
     <Provider store = {store}>
       <Header/>
       <Counter/>
+      <DestinationList/>
     </Provider>
   </div>
 );

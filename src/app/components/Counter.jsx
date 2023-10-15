@@ -10,7 +10,7 @@ function Counter() {
   const dispatch = useDispatch();
 
   return (
-    <div className="mt-2 pt-3 pl-2 text-center" style={{borderTop:"1px solid #999"}}>
+    <div className="mt-2 pt-3 pl-2 text-center">
       <div className="text-white pb-2 h4">
         Counter: {count}
       </div>
