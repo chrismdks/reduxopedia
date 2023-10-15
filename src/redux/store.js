@@ -5,7 +5,14 @@ import { counterReducer } from "./slice/counterSlice"; // whole reducer
 export const store = configureStore({
     reducer: {
         // obj because we can have multiple reducers
-        counter: counterReducer
+        counterStore: counterReducer
     }
 })
-console.log(store);
+// check state
+console.log(store.getState());
+// call increment action:
+store.dispatch({
+    type: "counter/increment"
+});
+// check again
+console.log(store.getState());
