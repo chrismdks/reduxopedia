@@ -20,6 +20,12 @@ export const counterSlice = createSlice({
         decrementMultiplier: (state, action) => {
             state.count -= Number(action.payload);
         }
+    },
+    extraReducers: (builder) => {
+        // listen to a custom route
+        builder.addCase('destination/resetDestination', (state) => {
+            state.count=0;
+        })
     }
 })
 

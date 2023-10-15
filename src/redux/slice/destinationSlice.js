@@ -31,9 +31,12 @@ export const destinationSlice = createSlice({
     // state: state of THIS slice, not of the store.
     destinationClicked: (state, action) => {
       state.destinationSelected = action.payload
+    },
+    resetDestination: (state)=>{
+      state.destinationSelected=null;
     }
   }
 })
 
-export const {destinationClicked} = destinationSlice.actions; // export specific actions of reducer
+export const {destinationClicked,resetDestination} = destinationSlice.actions; // export specific actions of reducer
 export const destinationReducer =  destinationSlice.reducer; // export whole reducer
